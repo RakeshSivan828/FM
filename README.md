@@ -1,91 +1,75 @@
 # Frequency-Modulation
 
-EXP NO: 1	GENERATION AND DETECTION OF FM
+#EXP NO: 1	GENERATION AND DETECTION OF FM
 
 AIM:
 
-To generate and detect the frequency modulation and demodulation u s i n g S C I L A B and to calculate modulation index of FM.
+   To generate and detect the frequency modulation and demodulation u s i n g S C I L A B and to calculate modulation index of FM.
 
 EQUIPMENTS REQUIRED
 
-•	Computer with i3 Processor
+   •	Computer with i3 Processor
 
-•	SCI LAB
+   •	SCI LAB
 
 THEORY:
 
-Modulation can be defined as the process by which the characteristics of carrier wave are varied in accordance with the modulating wave (signal). Modulation is performed in a transmitter by a circuit called a modulator.
-Need for modulation is as follows:
-•	Avoid mixing of signals
-•	Reduction in antenna height
-•	long distance communication
-•	Multiplexing
-•	Improve the quality of reception
-•	Ease of radiation.
-Amplitude Modulation is the process of changing the amplitude of a relatively high frequency carrier signal in proportion with the instantaneous value of the modulating signal. The output waveform contains all the frequencies that make up the AM signal and is used to transport the information through the system. Therefore the shape of the modulated wave is called the AM envelope. With no modulating signal the output waveform is simply the carrier signal. Coefficient of modulation is a term used to describe the amount of amplitude change present in an AM waveform. There are three degrees of modulation available based on value of modulation index.
-1)	Under modulation :	m<1, Em < Ec
-2)	Critical modulation: m-1, Em = Ec
-3)	Over modulation:	m>1, Em > Ec
+   Frequency modulation is a type of modulation in which the frequency of the high frequency (carrier) is varied in accordance with the instantaneous value of the modulating signal.
+FREQUENCY DEVIATION f and MODULATION INDEX m f :
+   The frequency deviation f represents the maximum shift between the  modulatedsignal
+ frequency, over and under the frequency of the carrier.
+
+ We define modulation index m f the ratio between f and the modulating frequency
+                    m= f / fm
+
+
+FREQUENCY MODULATION GENERATION:
+     The circuits used to generate a frequency modulation must vary the frequency of a high frequency signal (carrier) as function of the amplitude of a low frequency signal (modulating signal). In practice there are two main methods used to generate FM.
+
 
 
 
 Note: Keep all the switch faults in off position
 
 Algorithm
-1.	Define Parameters
-First, define the parameters for your signals:
-•	Carrier frequency (fc)
-•	Modulating signal frequency (fm)
-•	Sampling frequency (Fs)
-•	Duration of the signal (T)
 
-
-2.	Create a time vector based on the sampling frequency and duration.
+ 1.	Define Parameters:
+   •	Fs: Sampling frequency.
+   •	T: Duration of the signal.
+   •	Fc: Carrier frequency.
+   •	Fm: Frequency of the modulating signal.
+   •	Beta: Modulation index, which controls the extent of frequency deviation.
+ 2.	Generate Signals:
+   •	modulating_signal: Sinusoidal signal used for modulation.
+   •	carrier_signal: The high-frequency carrier signal.
+   •	modulated_signal: FM modulated signal calculated by varying the carrier frequency according to the modulating signal.
+ 3.	FM Modulation:
+   •	Modulated_signal is obtained by modulating the carrier signal with the modulating signal.
  
-3.	Create Modulating Signal
-Define the modulating signal (message signal).
+ 4.	FM Demodulation:
+   •	Differentiation: Computes the derivative of the modulated signal to extract frequency variations.
+   •	Envelope Detection: Takes the absolute value to retrieve the envelope of the signal.
+   •	Low-pass Filtering: Applies a Butterworth low-pass filter to smooth the envelope and recover the original modulating signal.
+ 5.	Visualization:
+   •	Plots the modulating signal, carrier signal, FM modulated signal, and demodulated signal for analysis.
 
-4.	Create Carrier Signal
-Define the carrier signal.
+PROCEDURE
 
+  •	Refer Algorithms and write code for the experiment.
+  •	Open SCILAB in System
+  •	Type your code in New Editor
+  •	Save the file
+  •	Execute the code
+  •	If any Error, correct it in code and execute again
 
-5.	Perform Amplitude Modulation
-Multiply the carrier signal by the modulating signal plus 1 (to ensure the modulation depth).
-
-
-6.	Plot the Signals
-Visualize the modulating, carrier, and modulated signals.
-
-
-7.	Demodulate the AM Signal
-To demodulate, you can use envelope detection. One way is to rectify the signal and then apply a low-pass filter.
-
-8.	Plot the Demodulated Signal
-Visualize the demodulated signal.
-
-
-9.	Compare Signals
-Compare the original modulating signal with the demodulated signal. PROCEDURE
-•	Refer Algorithms and write code for the experiment.
-•	Open SCILAB in System
-•	Type your code in New Editor
-•	Save the file
-•	Execute the code
-•	If any Error, correct it in code and execute again
-•	Verify the generated waveform using Tabulation and Model Waveform
 
 Program
 
-<img width="559" height="669" alt="image" src="https://github.com/user-attachments/assets/a050302b-6ac9-4560-8237-edea36a0547c" />
-
-
+<img width="559" height="669" alt="image" src="https://github.com/user-attachments/assets/82c35b4f-1090-4a7e-ab4e-6b1a98f8a0b6" />
 
 Output Waveform
 
-<img width="1540" height="980" alt="image" src="https://github.com/user-attachments/assets/5b2a50a8-865c-4788-bd66-53d388f745e1" />
-
-
-
+<img width="1540" height="980" alt="image" src="https://github.com/user-attachments/assets/c5f80257-a004-4415-9ebc-3fff2c0e32fd" />
 
 
 TABULATION:
@@ -98,11 +82,7 @@ Calculation
 
 
 MODEL GRAPH
- <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/55326c5b-7dd5-4873-aaf6-d219bb7c4420" />
-
- 
- 
-
+ <img width="919" height="1290" alt="image" src="https://github.com/user-attachments/assets/58d5c50d-9a9e-4cab-a7b2-9c3ca2851ca8"/>
 
 RESULT:
 Thus the amplitude modulation and demodulation is experimentally done and the output is verified.
